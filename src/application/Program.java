@@ -1,11 +1,11 @@
 package application;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 import entities.Product;
-import util.ProductPredicate;
 
 public class Program {
 
@@ -20,10 +20,10 @@ public class Program {
         list.add(new Product("Tablet", 450.00));
         list.add(new Product("HD case", 80.90));
 
-        list.removeIf(new ProductPredicate());
+        list.removeIf(Product:: staticProductPredicate);
 
         for(Product p : list) {
 		System.out.println(p);
-	}
+        }
 	}
 }
